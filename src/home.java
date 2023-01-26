@@ -76,6 +76,11 @@ public class home extends javax.swing.JFrame {
         jButton2.setIcon(new javax.swing.ImageIcon("/Users/stanley.enemuo/proj_images/configuration.png")); // NOI18N
 
         jButton3.setIcon(new javax.swing.ImageIcon("/Users/stanley.enemuo/proj_images/students.png")); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -264,6 +269,13 @@ public class home extends javax.swing.JFrame {
                 home object = new home();
                 object.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+                setVisible(false);
+                showStudent object = new showStudent();
+                object.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

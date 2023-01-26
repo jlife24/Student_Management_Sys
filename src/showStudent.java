@@ -1,3 +1,11 @@
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import javax.swing.table.TableModel;
+import net.proteanit.sql.DbUtils;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -12,8 +20,26 @@ public class showStudent extends javax.swing.JFrame {
     /**
      * Creates new form showStudent
      */
+    Connection conn = null;
+    Statement statement = null;
+    ResultSet rs = null;
+    
     public showStudent() {
+        super("Students");
         initComponents();
+        conn = dbConnection.connection();
+        showRecord();
+    }
+    
+    public void showRecord(){
+        try{
+            statement = conn.createStatement();
+            String sql = "SELECT * FROM STUDENT";
+            ResultSet res = statement.executeQuery(sql);
+            jTable1.setModel(DbUtils.resultSetToTableModel(res));
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
     }
 
     /**
@@ -231,4 +257,6 @@ public class showStudent extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    
 }
