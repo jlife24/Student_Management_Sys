@@ -89,6 +89,11 @@ public class showStudent extends javax.swing.JFrame {
 
         jButton3.setIcon(new javax.swing.ImageIcon("/Users/stanley.enemuo/proj_images/back.png")); // NOI18N
         jButton3.setText("Back");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -207,6 +212,13 @@ public class showStudent extends javax.swing.JFrame {
         about object = new about();
         object.setVisible(true);
     }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+                setVisible(false);
+                home object = new home();
+                object.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
