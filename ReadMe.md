@@ -17,5 +17,5 @@ Student Module: The student database was done within phpMyAdmin mysql. Install X
 
 Any advise for common problems or issues.
 
-Acknowledgments
+Acknowledgments:
 Youtube tips and guidelines videos
