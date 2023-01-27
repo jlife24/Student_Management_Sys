@@ -3,7 +3,7 @@ This is a Graphical User Interface based project that incoporates the swing modu
 
 Getting Started
 Dependencies
-Netbeans12 was used for this particular project as well you as JDK, XAMPP, JDBC DRIVER.
+Netbeans12 was used for this particular project as well as JDK, XAMPP, JDBC DRIVER.
 This project requires the use of a MySQL database.
 MySQL JConnector is required for connecting to MySQL and Java.
 An IDE such as Eclipse or IntelliJ would also be fine
